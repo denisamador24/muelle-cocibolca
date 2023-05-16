@@ -33,6 +33,10 @@ function FormTypeVehicle () {
       Camioneta
         </option>
         <option value="minibus">Buseta</option>
+        <option>Camión</option>
+        <option>Caponera</option>
+        <option>Bus</option>
+        <option>Casa Rodante</option>
       </select>
       
     </div>
