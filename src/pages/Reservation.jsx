@@ -1,11 +1,19 @@
 import dataShips from '../utils/dataShips.js';
+import priceVehicles from '../utils/priceVehicles.js';
 import Barco from '../components/Barco.jsx';
+import FormTypeVehicle from '../components/FormTypeVehicle.jsx';
+import FieldSetLoaded from '../components/FieldSetLoaded.jsx';
 import { useParams } from 'react-router-dom';
+import { useState } from 'react';
 
-export default function Reservation () {
-  const {indexShip} = useParams();
+
+export default function Reservation() {
+  const { indexShip } = useParams();
   const dataShip = dataShips[indexShip];
-  
+  const [vehicle, setVehicle] = useState('');
+  const [vehicleLoaded, setVehicleLoaded] = useState(false);
+
+
   return (
     <div >
       <h2>Haz tu reservación en el Ferry</h2>
@@ -13,33 +21,20 @@ export default function Reservation () {
         name={dataShip.name}
         leaves={dataShip.leaves}
       />
-      <FormTypeVehicle/>
+      
+       <FormTypeVehicle 
+        vehicle={vehicle} 
+        setVehicle={setVehicle}
+        vehicleList={priceVehicles}
+      /> 
+      
+      { vehicle === 'Camión' &&<FieldSetLoaded 
+        vehicleLoaded={vehicleLoaded}
+        setVehicleLoaded={setVehicleLoaded}
+      />
+     }
      
     </div>
-   )
-}
-
-function FormTypeVehicle () {
-  
-  return (
-    <div>
-      <p>Seleciona los datos de tu vehículo</p>
-      <span>Selecciona tu vehículo: </span> 
-      <select name="vehicle">
-        <option>Seleciona el vehículo</option>
-        <option value="motocicleta">Motocicleta</option>
-        <option value="car">Carro</option>
-        <option value="van">
-      Camioneta
-        </option>
-        <option value="minibus">Buseta</option>
-        <option>Camión</option>
-        <option>Caponera</option>
-        <option>Bus</option>
-        <option>Casa Rodante</option>
-      </select>
-      
-    </div>
-    
   )
 }
+
