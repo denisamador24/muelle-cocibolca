@@ -1,13 +1,27 @@
-export default function Schedule ({place, hours}) {
+import './selected.css';
+import './Schedule.css';
+
+export default function Schedule ({place, hours,
+  hourSelected,
+  changeHour
+}) {
   
   
   return (
-    <article>
+    <article className="schedule-row">
       <p>{place}</p>
-      <ul>
-        {hours.map(hour => 
-          <li>{hour}</li>
-        )}
+      <ul className="schedule-row">
+        {hours.map(hour => {
+          if (hourSelected !== undefined){
+            return (<li 
+          className={hour === hourSelected ? 'schedule-column selected' : 'schedule-column' }
+          onClick={ () => changeHour(hour)}
+          >{hour}</li>)
+          
+          } else {
+            return (<li className="schedule-column">{hour}</li>)
+          }
+        })}
       </ul>
     </article>
   )

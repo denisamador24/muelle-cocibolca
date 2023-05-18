@@ -1,0 +1,13 @@
+.button-container {
+  height: 50px;
+  width: 100%;
+  margin: 16px;
+  position: relative;
+}
+
+.button-container button {
+  display: inline-block;
+  position: absolute;
+  right: 32px;
+  bottom: 0;
+}

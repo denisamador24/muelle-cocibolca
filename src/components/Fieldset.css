@@ -1,0 +1,39 @@
+.custom-fieldset {
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 16px;
+  background-color: #f8f8f8; /* Color de fondo del fieldset */
+}
+
+.custom-fieldset legend {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.custom-fieldset label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555; /* Color de texto de las etiquetas */
+}
+
+.custom-fieldset input[type="radio"] {
+  margin-right: 8px;
+}
+
+.custom-fieldset input[type="radio"] + label:before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 4px;
+  background-color: #007bff; /* Color del punto seleccionado */
+}
+
+.custom-fieldset input[type="radio"]:checked + label:before {
+  background-color: #ff5722; /* Color del punto seleccionado cuando está marcado */
+}
+
+/* Otros estilos de tu elección */

@@ -1,4 +1,4 @@
-
+import './App.css'
 import Home from './pages/Home.jsx';
 import Reservation from './pages/Reservation.jsx';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'

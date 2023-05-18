@@ -38,17 +38,3 @@ const priceVehicles = [
   }
 ];
 export default priceVehicles;
-
-/*
-<option value="Motocicleta">Motocicleta</option> <
-option value = "Carro" > Carro < /option> <
-  option value = "Camioneta" >
-  Camioneta <
-  /option> <
-  option value = "Buseta" > Buseta < /option> <
-  option value = "Camión" > Camión < /option> <
-  option value = "Caponera" > Caponera < /option> <
-  option value = "Bus" > Bus < /option> <
-  option value = "Casa rodante" > Casa Rodante < /option> <
-  option value = "Fulgón" > Fulgón < /option>
-*/

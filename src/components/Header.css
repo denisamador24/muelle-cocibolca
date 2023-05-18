@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.logo {
+  width: 68px; /* Ajusta el tamaño según tus necesidades */
+  height: 68px; /* Ajusta el tamaño según tus necesidades */
+  margin-right: 10px; /* Ajusta el margen según tus necesidades */
+}
+
+.title {
+  font-size: 24px; /* Ajusta el tamaño de la fuente según tus necesidades */
+  color: #333; /* Ajusta el color según tus necesidades */
+}

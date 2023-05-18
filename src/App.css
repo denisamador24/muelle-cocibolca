@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto'
+}
+ul {
+  list-style: none;
+}
+
+/* Estilos para el select */
+.custom-select {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+}
+
+.custom-select select {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 8px;
+  font-size: 16px;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.custom-select select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+.custom-select::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%) rotate(45deg)
+}
