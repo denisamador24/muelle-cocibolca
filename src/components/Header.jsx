@@ -5,7 +5,7 @@ function Header() {
   return (
     <header className="header">
       <img src="/logo.jpg" alt="Logo" className="logo" />
-      <h1 className="title">Muelle Ometepe</h1>
+      <h1 className="title">Muelle Cocibolca</h1>
     </header>
   );
 }
