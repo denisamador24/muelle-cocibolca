@@ -2,7 +2,8 @@ import './Reservation.css';
 import dataShips from '../utils/dataShips.js';
 import priceVehicles from '../utils/priceVehicles.js';
 import Header from '../components/Header.jsx';
-import Button from '../components/Button.jsx';
+import Button from '@mui/material/Button';
+import {Autocomplete, TextField} from '@mui/material';
 import Barco from '../components/Barco.jsx';
 import FormTypeVehicle from '../components/FormTypeVehicle.jsx';
 import FieldSetLoaded from '../components/FieldSetLoaded.jsx';
@@ -21,6 +22,11 @@ export default function Reservation() {
   const [hour, setHour] = useState(' initial');
   const itemVehicle = priceVehicles.find(v => v.type === vehicle);
   let priceVehicle;
+  
+  
+  
+  const vehicleOptions = priceVehicles.map(v => v.type);
+  
   if (vehicleLoaded && itemVehicle.priceLoaded) {
     priceVehicle = itemVehicle.priceLoaded;
   } else {
@@ -44,13 +50,14 @@ export default function Reservation() {
         />
       </Fieldset>
       <br/>
-      <Fieldset title="Seleciona tu vehículo: ">
-        <FormTypeVehicle 
-          vehicle={vehicle} 
-          setVehicle={setVehicle}
-          vehicleList={priceVehicles}
-        /> 
-      </Fieldset>
+      <Autocomplete
+        value={vehicle}
+        options={vehicleOptions}
+        renderInput={(params) => (
+          <TextField {...params} label="Vehículo" variant="outlined" />
+        )}
+        onChange={(event, newVehicle) => setVehicle(newVehicle !== null ? newVehicle : 'Motocicleta')}
+      />
       <br/>
       {vehicle === 'Camión' &&<FieldSetLoaded 
         vehicleLoaded={vehicleLoaded}
@@ -61,7 +68,7 @@ export default function Reservation() {
       <p>El precio estimado es: {priceVehicle} C$</p>
       <br/>
       <div className="button-container">
-        <Button handleClick={ () => askReservation()
+        <Button variant="contained"onClick={ () => askReservation()
               }>Solicitar reservación
         </Button>
       </div>

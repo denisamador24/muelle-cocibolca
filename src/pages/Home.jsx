@@ -3,7 +3,7 @@ import dataShips from '../utils/dataShips.js';
 import './Home.css';
 import Header from '../components/Header.jsx';
 import Barco from '../components/Barco.jsx';
-import Button from '../components/Button.jsx';
+import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 
 export default function Home (){
@@ -27,7 +27,7 @@ export default function Home (){
                 id={index}
               />
               <div class="button-container">
-                  <Button handleClick={() => makeReservation(index)}>
+                  <Button variant="outlined" onClick={() => makeReservation(index)}>
                     Reservar
                   </Button>
           

@@ -1,30 +1,32 @@
+
 .welcome-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
-  background-color: #f8f8f8;
+  position: relative;
 }
 
-.welcome-page h1 {
+.description {
+  padding: 8px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.description p {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.step {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.step h2 {
   font-size: 24px;
-  margin-bottom: 16px;
+  margin: 8px;
 }
-
-.welcome-page img {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 16px;
+.next-button {
+  display: inline-block;
+  position: absolute;
+  right: 16px;
+  bottom: 68px;
 }
-
-.welcome-page p {
-  font-size: 16px;
-  margin-bottom: 32px;
-}
-
-.welcome-page button {
-  padding: 12px 24px;
-  font-size: 16px;
-  background-color: #007bff;
-  color: #
