@@ -35,8 +35,8 @@ const Welcome = () => {
             exit={{ opacity: 0, x: 100 }}
             transition={{ duration: 0.8 }}
           >
-            <h2>Paso 1</h2>
-            <p>Funcionalidad 1</p>
+            <h3>Horarios</h3>
+            <p>Muelle Cocibolca te ofrece todos los horarios del transporte acuático de Moyogalpa San Jorge y San José</p>
           </motion.div>
         )}
 
@@ -49,8 +49,8 @@ const Welcome = () => {
             exit={{ opacity: 0, x: 100 }}
             transition={{ duration: 0.8 }}
           >
-            <h2>Paso 2</h2>
-            <p>Funcionalidad 2</p>
+            <h3>Reservación</h3>
+            <p>Reserva fácilmente seleccionando tu vehículo y hora a salir</p>
           </motion.div>
         )}
 
@@ -63,8 +63,8 @@ const Welcome = () => {
             exit={{ opacity: 0, x: 100 }}
             transition={{ duration: 0.8 }}
           >
-            <h2>Paso 3</h2>
-            <p>Funcionalidad 3</p>
+            <h3>Listo</h3>
+            <p>Reservar es tan fácil</p>
           </motion.div>
         )}
       </AnimatePresence>

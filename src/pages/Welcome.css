@@ -1,4 +1,3 @@
-
 .welcome-page {
   height: 100vh;
   position: relative;
@@ -20,13 +19,13 @@
   margin-bottom: 40px;
 }
 
-.step h2 {
-  font-size: 24px;
-  margin: 8px;
+.step h3 {
+  font-size: 20px;
+  margin: 16px;
 }
 .next-button {
   display: inline-block;
   position: absolute;
   right: 16px;
-  bottom: 68px;
+  bottom: 100px;
 }

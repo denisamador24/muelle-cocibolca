@@ -34,7 +34,7 @@ export default function Reservation() {
   }
    
   function askReservation (){
-    window.open(`https://api.whatsapp.com/send?phone=78147194&text=Quiero hacer una reservación de: ${vehicle},  con hora: ${hour}`, '_blank')
+    window.open(`https://api.whatsapp.com/send?phone=+50586513101&text=Quiero hacer una reservación de: ${vehicle},  con hora: ${hour}`, '_blank')
   } 
 
   return (

@@ -1,3 +1,7 @@
+.search-container {
+  padding: 16px;
+}
+
 .button-container {
   height: 50px;
   width: 100%;
@@ -11,3 +15,4 @@
   right: 32px;
   bottom: 0;
 }
+
